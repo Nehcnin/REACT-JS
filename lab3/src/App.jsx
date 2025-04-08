@@ -25,6 +25,10 @@ const App = () => {
     setSearchTerm(term);
   }, []);
 
+  const clearSearch = useCallback(() => {
+    setSearchTerm("");
+  }, []);
+
   const filteredUsers = useMemo(() => {
     return users.filter((user) =>
       `${user.firstName} ${user.lastName}`.toLowerCase().includes(searchTerm.toLowerCase())
@@ -34,7 +38,7 @@ const App = () => {
   return (
     <div className="container">
       <h1>User Search</h1>
-      <SearchBar onSearch={handleSearch} />
+      <SearchBar onSearch={handleSearch} clearSearch={clearSearch} searchTerm={searchTerm} />
       {loading ? <p>Loading...</p> : <UserList users={filteredUsers} />}
     </div>
   );

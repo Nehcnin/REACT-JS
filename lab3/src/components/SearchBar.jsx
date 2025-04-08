@@ -1,8 +1,13 @@
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, clearSearch, searchTerm }) => {
   return (
     <div className="search-bar">
-      <input type="text" placeholder="Search users..." onChange={(e) => onSearch(e.target.value)} />
-      <button onClick={() => onSearch("")}>Clear</button>
+      <input
+        type="text"
+        placeholder="Search users..."
+        value={searchTerm}
+        onChange={(e) => onSearch(e.target.value)}
+      />
+      <button onClick={clearSearch}>Clear</button>
     </div>
   );
 };
