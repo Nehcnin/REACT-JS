@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'application'
+}
+
+def deploymentName = 'bibliospring'
+def tomcatHome = 'c:\\Tomcat\\apache-tomcat-11.0.4'
+//def tomcatHome = System.getenv('CATALINA_HOME')
+logger.quiet("Tomcat home detected as '${tomcatHome}'")
+
+group = 'edu.codespring.bibliospring'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly('jakarta.servlet:jakarta.servlet-api:6.1.0')
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.2'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.slf4j:slf4j-api:2.0.16'
+    runtimeOnly 'ch.qos.logback:logback-classic:1.5.12'
+    runtimeOnly 'mysql:mysql-connector-java:8.0.33'
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.json:json:20210307'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task deploy(type: Copy, dependsOn: 'war') {
+    doFirst {
+        if (!tomcatHome) throw new InvalidUserDataException("Tomcat home (CATALINA_HOME) not set")
+    }
+    from war.archiveFile
+    rename war.archiveFileName.get(), "${deploymentName}.war"
+    into "${tomcatHome}/webapps"
+}
+task undeploy(type: Delete) {
+    doFirst {
+        if (!tomcatHome) throw new InvalidUserDataException("Tomcat home (CATALINA_HOME) not set")
+    }
+    delete "${tomcatHome}/webapps/${deploymentName}.war"
+}
+
+
+group = 'edu.codespring.bibliospring'
+version = '1.0-SNAPSHOT'
+
+
+application {
+    mainClass = 'Main'
+}

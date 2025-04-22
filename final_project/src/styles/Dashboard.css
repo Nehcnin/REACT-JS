@@ -1,0 +1,301 @@
+.header {
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(90deg, rgba(18,198,255,1) 40%, rgba(0,145,238,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 7px solid rgb(129, 209, 249);
+    text-shadow: 2px 2px 2px rgba(0, 61, 91, 1);
+    font-family: "Teko", serif;
+  }
+
+  .user {
+    color: white;
+    font-size: 250%;
+    margin: auto 0 auto 2%;
+  }
+  
+  .logout {
+    margin: auto 1% auto auto;
+    font-size: 200%;
+    border-radius: 10px;
+    border: 4px solid red;
+    background-color: white;
+    color: rgb(255, 66, 66);
+    font-family: "Teko", serif;
+    transition: 0.2s;
+    text-shadow: 1px 1px 0px rgb(102, 28, 28);
+  }
+  
+  .logout:hover {
+    border: 4px solid rgb(203, 25, 25);
+    background-color: rgb(255, 66, 66);
+    color: white;
+    text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  }
+  
+  .parent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(214, 241, 249) 40%, rgb(161, 217, 251) 100%);
+  }
+  
+  .first, .second, .third {
+    display: inline-block;
+    width: 25%;
+  }
+  
+  .second {
+    width: 50%;
+  }
+  
+  .second h1 {
+    text-align: center;
+  }
+  
+  .bookForm,
+  .bookDeleteForm,
+  .passwform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin: 8% 10% 0 10%;
+    padding-bottom: 2%;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px rgb(1, 81, 119);
+    transition: 0.2s;
+  }
+  
+  .bookForm:hover,
+  .bookDeleteForm:hover,
+  .passwform:hover {
+    margin: 7% 11% 5% 9%;
+    box-shadow: 2px 2px 3px 3px rgb(1, 81, 119);
+  }
+  
+  .inp {
+    border-radius: 5px;
+    font-size: 30px;
+    font-family: "Teko", serif;
+  }
+  
+  .ppp {
+    margin-top: 0;
+    margin-bottom: -30px;
+    font-size: 40px;
+  }
+  
+  .mess {
+    font-size: 30px;
+  }
+  
+  .submm,
+  .submDelete {
+    margin-top: 5%;
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 0 20px;
+    font-family: "Teko", serif;
+    transition: 0.2s;
+  }
+  
+  .submm {
+    border: 4px solid rgb(42, 191, 255);
+    background-color: white;
+  }
+  
+  .submm:hover {
+    background-color: rgb(34, 116, 152);
+    border: 4px solid rgb(19, 69, 90);
+    color: white;
+    text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  }
+  
+  .submDelete {
+    border: 4px solid red;
+    background-color: white;
+    color: rgb(255, 66, 66);
+    text-shadow: 1px 1px 0px rgb(102, 28, 28);
+  }
+  
+  .submDelete:hover {
+    border: 4px solid rgb(203, 25, 25);
+    background-color: rgb(255, 66, 66);
+    color: white;
+    text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  }
+  
+  .bookList {
+    margin-top: 2%;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .bookItem {
+    
+    width: 90%;
+    font-size: 150%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(1, 81, 119);
+    margin: 0 0 1% 4%;
+    padding: 2%;
+    background-color: white;
+    transition: 0.2s;
+  }
+  
+  .bookItem:hover {
+    margin: -1% 1% 2% 3%;
+    box-shadow: 2px 2px 4px 4px rgb(1, 81, 119);
+  }
+  
+  .bookItem p {
+    margin: -1% 0;
+  }
+  
+  .deleteBtn {
+    font-family: "Teko", serif;
+    width: 100%;
+    margin-top: 1%;
+    font-size: 130%;
+    border: 4px solid rgb(255, 66, 66);
+    background-color: white;
+    color: rgb(255, 66, 66);
+    border-radius: 10px;
+    transition: 0.2s;
+    text-shadow: 1px 1px 0px rgb(102, 28, 28);
+  }
+  
+  .deleteBtn:hover {
+    border: 4px solid rgb(144, 0, 0);
+    background-color: rgb(255, 66, 66);
+    color: white;
+    text-shadow: 2px 2px 7px rgb(0, 0, 0);
+  }
+
+  .redPadd{
+    margin-bottom: -1%;
+  }
+
+  .boldd{
+    font-weight: bold;
+  }
+  
+.nav-buttons{
+  height: 10%;
+}
+
+  .nav-btn1{
+    width: 50%;
+    height: 100%;
+    font-size: 200%;
+    border-radius: 10px 0px 0px 10px;
+    background-color: white;
+    border: 4px solid rgb(42, 191, 255);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Teko", serif;
+    transition: 0.2s;
+}
+
+.nav-btn1:hover{
+    font-size: 30;
+    border-radius: 10px 0px 0px 10px;
+    border: 4px solid rgb(19, 69, 90);
+    background-color: rgb(34, 116, 152);
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Teko", serif;
+    color: white;
+    text-shadow: 2px 2px 7px rgb(0, 0, 0);
+}
+
+.nav-btn2{
+  width: 50%;
+    height: 100%;
+    font-size: 200%;
+  border-radius: 0px 10px 10px 0px;
+  background-color: white;
+  border: 4px solid rgb(42, 191, 255);
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Teko", serif;
+  transition: 0.2s;
+}
+
+.nav-btn2:hover{
+  font-size: 30;
+  border: 4px solid rgb(19, 69, 90);
+  background-color: rgb(34, 116, 152);
+  border-radius: 0px 10px 10px 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Teko", serif;
+  color: white;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+}
+.editBtn{
+  margin-top: 0.2%;
+  width: 100%;
+    font-size: 130%;
+  border-radius: 10px;
+  background-color: white;
+  border: 4px solid rgb(42, 191, 255);
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Teko", serif;
+  transition: 0.2s;
+}
+
+.editBtn:hover{
+  font-size: 30;
+  border: 4px solid rgb(19, 69, 90);
+  background-color: rgb(34, 116, 152);
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Teko", serif;
+  color: white;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+}
+.search-container{
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 10%;
+}
+.search{
+  color: rgb(19, 69, 90);
+  font-size: 200%;
+  width: 80%;
+  font-family: "Teko", serif;
+  border-radius: 10px 0px 0px 10px;
+    background-color: white;
+    border: 4px solid rgb(19, 69, 90);
+
+}
+
+.clear-search{
+  color: rgb(19, 69, 90);
+  font-size: 200%;
+  font-family: "Teko", serif;
+  border-radius: 0px 10px 10px 0px;
+    background-color: white;
+    border: 4px solid rgb(9, 32, 42);
+    padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.2s;
+}
+
+.clear-search:hover{
+  border-color: rgb(60, 196, 255);
+  background-color: rgb(34, 116, 152);
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Teko", serif;
+  color: white;
+  text-shadow: 2px 2px 7px rgb(0, 0, 0);
+}
